@@ -6,10 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import com.example.shimmer.Modifier
 
@@ -20,7 +17,7 @@ class MainActivity : ComponentActivity() {
             MyApplicationTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier().fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
                     Greeting()
@@ -32,9 +29,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting() {
-    val Modifier = com.example.shimmer.Modifier()
-    Column(modifier = Modifier.fillMaxSize()) {
-        Box(modifier = Modifier(true)
+    Column(modifier = Modifier().fillMaxSize()) {
+        Box(modifier = Modifier()
             .fillMaxWidth()
             .fillMaxHeight(0.5f))
     }
